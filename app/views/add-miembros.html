@@ -1,0 +1,25 @@
+<div class="modal-header">
+	<button type="button" class="close" ng-click="cancel()" data-dismiss="modal" aria-hidden="true">&times;</button>
+	<h1>Añadir un miembro</h1>
+</div>
+
+<div class="modal-body">
+	<label>Nombre</label>
+	<input type="text" ng-model="nuevoMiembro.nombre" required/>
+	<label>Tipo de miembro</label>
+	<select  ng-model="nuevoMiembro.tipoMiembro" required>
+		<option value="Free">Free</option>
+		<option value="Premium">Premium</option>
+	</select>
+	<label>Puntos de fidelidad</label>
+	<input type="number" ng-model="nuevoMiembro.fidelidad" min="0" max="10" value="0" required/>
+	<label>Fecha de union</label>
+	<input type="date" ng-model="nuevoMiembro.fechaUnion" required />
+</br>
+	<button class="btn btn-success" ng-click="salvarNuevoMiembro()">Guardar</button>
+</div>
+
+<datalist id="tipoMiembro">
+	<option value="Free">Free</option>
+	<option value="Premium">Premium</option>
+</datalist>
